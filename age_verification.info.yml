@@ -1,0 +1,5 @@
+name: 'Age Verification'
+type: module
+description: 'Displays a custom modal to perform a simple verification'
+core_version_requirement: '^8 || ^9'
+configure: age_verification.settings

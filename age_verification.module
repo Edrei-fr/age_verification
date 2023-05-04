@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function age_verification_page_attachments_alter(array &$attachments) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    $config = \Drupal::config('age_verification.settings');
+    if ($config) {
+      $attachments['#cache']['tags'] = $config->getCacheTags();
+      $bg_image = $config->get('bg_image');
+      if ($bg_image) {
+        $fid = $bg_image[0];
+        $file = File::load($fid);
+        $file_url = $file->createFileUrl();
+        $attachments['#attached']['library'][] = 'age_verification/age_verification';
+        $attachments['#attached']['drupalSettings']['av_img_url'] = $file_url;
+      }
+    }
+  }
+}

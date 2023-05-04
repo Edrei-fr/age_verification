@@ -1,0 +1,14 @@
+age_verification:
+  version: 1
+  css:
+    theme:
+      css/age-verification.css: {}
+  js:
+    js/age-verification.js: {}
+    js/av-img.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog.ajax
+    - core/js-cookie
+    - core/drupalSettings

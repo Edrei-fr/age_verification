@@ -1,0 +1,5 @@
+age_verification.settings:
+  title: 'Age verification'
+  description: 'Configure the settings for age verification.'
+  route_name: age_verification.settings
+  parent: system.admin_config_system

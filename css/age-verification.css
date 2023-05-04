@@ -1,0 +1,32 @@
+.no-titlebar {
+  display: none;
+}
+
+.av-img {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.ui-dialog {
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 9980;
+  height: 100% !important;
+}
+
+.ui-dialog-content {
+  max-height: 100% !important;
+  top: 40%;
+}
+
+.age-verification-modal-form > input[type="submit"] {
+  margin: 0 auto;
+  display: block;
+}
+
+.age-verification-modal-form > p {
+  text-align: center;
+}

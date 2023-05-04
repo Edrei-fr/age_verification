@@ -1,0 +1,15 @@
+age_verification.settings:
+  path: /admin/config/system/age_verification
+  defaults:
+    _title: 'Administer age verification'
+    _form: \Drupal\age_verification\Form\AgeVerificationSettingsForm
+  requirements:
+    _permission: 'administer age_verification'
+
+age_verification.age_verification_modal:
+  path: '/age-verification'
+  defaults:
+    _controller: '\Drupal\age_verification\Controller\AgeVerificationController::openModal'
+    _title: 'Age Verification'
+  requirements:
+    _permission: 'access content'
